@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="main">
+	<h4>очки:</h4><h4 class="sc"></h4>
+	<div class="box" style="background: red; height: 100px; width: 100px; position: absolute; transition: 2s; left: 400px; border-radius: 100px;"></div>
+	<div class="box1" style="background: red; height: 100px; width: 100px; position: absolute; transition: 2s; left: 0px; border-radius: 100px; top: 300px;"></div>
+	<div class="box2" style="background: red; height: 100px; width: 100px; position: absolute; transition: 2s; left: 0px; border-radius: 100px; left: 800px; top: 200px"></div>
+	<div class="box3" style="background: red; height: 100px; width: 100px; position: absolute; transition: 2s; left: 0px; border-radius: 100px; left: 400px; top: 446px;"></div>
+	<img src="1.jpg" class="img" style="display: none;">
+</div>
+<script type="text/javascript">
+	let sc = 0;
+	
+	document.querySelector(".sc").innerHTML = sc;
+	let box = document.querySelector(".box")	
+		let pos = 400
+		let move = function () {
+			pos = pos + 80;
+			box.style.left = pos + "px";
+		}
+		box.onclick = function(){
+			box.style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".sc").innerHTML = sc;
+			if(sc==4){
+			document.querySelector(".main").style.display = "none"
+			document.querySelector(".img").style.display = "block"
+			}
+		}
+		
+
+let box1 = document.querySelector(".box1")	
+		let pos1 = 300
+		let move1 = function () {
+			pos1 = pos1 + 80;
+			box1.style.top = pos1 + "px";
+		}
+		box1.onclick = function(){
+			box1.style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".sc").innerHTML = sc;
+			if(sc==4){
+			document.querySelector(".main").style.display = "none"
+			document.querySelector(".img").style.display = "block"
+			}
+		}
+
+
+
+		let box2 = document.querySelector(".box2")	
+		let pos2 = 800
+		let move2 = function () {
+			pos2 = pos2 - 80;
+			box2.style.left = pos2 + "px";
+		}
+		box2.onclick = function(){
+			box2.style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".sc").innerHTML = sc;
+			if(sc==4){
+			document.querySelector(".main").style.display = "none"
+			document.querySelector(".img").style.display = "block"
+			}
+		}
+
+
+
+
+let box3 = document.querySelector(".box3")	
+		let pos3 = 400
+		let move3 = function () {
+			pos3 = pos3 - 80;
+			box3.style.top = pos3 + "px";
+		}
+		box3.onclick = function(){
+			box3.style.display = "none"
+			sc = sc + 1;
+			document.querySelector(".sc").innerHTML = sc;
+			if(sc==4){
+			document.querySelector(".main").style.display = "none"
+			document.querySelector(".img").style.display = "block"
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+        setInterval(move, 1000)
+        setInterval(move1, 1000)
+        setInterval(move2, 1000)
+        setInterval(move3, 1000)
+
+</script>
+
+</body>
+</html>
